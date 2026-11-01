@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: 'Geist Variable', sans-serif;
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  --background: #1C1D1F;
+  --foreground: #F3F4F6;
+  --card: #232528;
+  --card-foreground: #F3F4F6;
+  --popover: #232528;
+  --popover-foreground: #F3F4F6;
+  --primary: #D28E72;
+  --primary-foreground: #141516;
+  --secondary: #2A2C30;
+  --secondary-foreground: #F3F4F6;
+  --muted: #26282B;
+  --muted-foreground: #9CA3AF;
+  --accent: #2A2C30;
+  --accent-foreground: #F3F4F6;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #D28E72;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #1C1D1F;
+  --foreground: #F3F4F6;
+  --card: #232528;
+  --card-foreground: #F3F4F6;
+  --popover: #232528;
+  --popover-foreground: #F3F4F6;
+  --primary: #D28E72;
+  --primary-foreground: #141516;
+  --secondary: #2A2C30;
+  --secondary-foreground: #F3F4F6;
+  --muted: #26282B;
+  --muted-foreground: #9CA3AF;
+  --accent: #2A2C30;
+  --accent-foreground: #F3F4F6;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #D28E72;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    background-color: #1C1D1F;
+    color: #F3F4F6;
+  }
+  body {
+    background-color: #1C1D1F;
+    color: #F3F4F6;
+    margin: 0;
+    font-family: var(--font-sans);
+  }
+}
